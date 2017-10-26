@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
@@ -13,3 +14,20 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="out/production/RXTXtest2"/>
 </classpath>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="lib/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="lib/miglayout-core-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/miglayout-core-sources.jar"/>
+	<classpathentry kind="lib" path="lib/miglayout-core.jar"/>
+	<classpathentry kind="lib" path="lib/miglayout-swing-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/miglayout-swing-sources.jar"/>
+	<classpathentry kind="lib" path="lib/miglayout-swing.jar"/>
+	<classpathentry kind="lib" path="lib/RXTXcomm.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="out/production/RXTXtest2"/>
+</classpath>
+>>>>>>> 9aaf472ff5f238c4d182143f28190be93ae0c001
