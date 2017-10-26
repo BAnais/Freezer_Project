@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -64,12 +65,14 @@ public class Controller implements ActionListener, ModelObserver, ChangeListener
 	public void onTemperatureIntChanged(double value) {
 		// TODO
 		view.chart.update(value);
-		view.temp.setText(data.getTempInt()+" Â°C");
+		view.temp.setText(data.getTempInt()+" °C");
 
 		if (data.getTempInt() < data.getSlider()){
 			view.temperatureReached = true;
+			view.btnTempAtteinte.setBackground(Color.GREEN);
 		}else if (data.getTempInt() >= data.getSlider()){
 			view.temperatureReached = false;
+			view.btnTempAtteinte.setBackground(Color.RED);
 
 		}
 	}

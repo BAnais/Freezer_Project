@@ -15,6 +15,7 @@ import javax.swing.JSpinner;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.JOptionPane;
+import javax.swing.JButton;
 
 public class View1 extends JFrame {
 
@@ -25,10 +26,12 @@ public class View1 extends JFrame {
 	public JSpinner spinner;
 	public JProgressBar progressBar;
 	public JLabel temp;
-	private JLabel lblc;
+	public JLabel lblc;
 	public boolean alertDoorOpen = false;
 	public boolean dewPoint = false;
 	public boolean temperatureReached = false;
+	public JButton btnTempAtteinte;
+	public JButton buttonCondensation;
 	// public JFrame frame;
 	/**
 	 * Create the frame.
@@ -42,7 +45,7 @@ public class View1 extends JFrame {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
 
-		this.setSize(1019,719);
+		this.setSize(1083,723);
 
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.DARK_GRAY);
@@ -61,7 +64,7 @@ public class View1 extends JFrame {
 
 		JPanel panel_chart = new JPanel();
 		panel_chart.setBackground(Color.BLACK);
-		chart = new JFChart("Temperature (Â°C)");
+		chart = new JFChart("Temperature (°C)");
 		panel_chart.add(chart);
 
 		JLabel lblPimpMyFridge = new JLabel("Pimp My Fridge ");
@@ -90,53 +93,88 @@ public class View1 extends JFrame {
 			JFrame parent = new JFrame();
 			JOptionPane.showMessageDialog(parent, "Printing complete");
 		}
+		
+		btnTempAtteinte = new JButton("");
+		btnTempAtteinte.setForeground(Color.RED);
+		btnTempAtteinte.setBackground(Color.RED);
+		
+		JLabel lblNewLabel_1 = new JLabel("Temp\u00E9rature atteinte");
+		lblNewLabel_1.setForeground(Color.WHITE);
+		
+		buttonCondensation = new JButton("");
+		buttonCondensation.setForeground(Color.ORANGE);
+		buttonCondensation.setBackground(Color.ORANGE);
+		
+		JLabel lblAttentionCondensation = new JLabel("Attention condensation");
+		lblAttentionCondensation.setForeground(Color.WHITE);
 
 
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
-				groupLayout.createParallelGroup(Alignment.LEADING)
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(110)
+					.addComponent(panel_chart, GroupLayout.PREFERRED_SIZE, 759, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addGroup(groupLayout.createSequentialGroup()
-								.addGap(110)
-								.addComponent(panel_chart, GroupLayout.PREFERRED_SIZE, 759, GroupLayout.PREFERRED_SIZE)
-								.addContainerGap(134, Short.MAX_VALUE))
+							.addComponent(btnTempAtteinte, GroupLayout.PREFERRED_SIZE, 13, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(lblNewLabel_1))
 						.addGroup(groupLayout.createSequentialGroup()
-								.addContainerGap()
-								.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, 518, Short.MAX_VALUE)
-								.addGap(3)
-								.addComponent(panel, GroupLayout.PREFERRED_SIZE, 462, GroupLayout.PREFERRED_SIZE)
-								.addContainerGap())
+							.addComponent(buttonCondensation, GroupLayout.PREFERRED_SIZE, 13, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(lblAttentionCondensation)))
+					.addContainerGap(63, Short.MAX_VALUE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, 518, Short.MAX_VALUE)
+					.addGap(3)
+					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 462, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap())
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(31)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addGroup(groupLayout.createSequentialGroup()
-								.addGap(31)
-								.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-										.addGroup(groupLayout.createSequentialGroup()
-												.addComponent(lblNewLabel)
-												.addPreferredGap(ComponentPlacement.RELATED, 401, Short.MAX_VALUE)
-												.addComponent(lblRglageDeLa, GroupLayout.PREFERRED_SIZE, 242, GroupLayout.PREFERRED_SIZE)
-												.addGap(198))
-										.addGroup(groupLayout.createSequentialGroup()
-												.addComponent(lblPimpMyFridge)
-												.addPreferredGap(ComponentPlacement.RELATED, 586, Short.MAX_VALUE)
-												.addComponent(panel_logo, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
-												.addGap(27))))
+							.addComponent(lblNewLabel)
+							.addPreferredGap(ComponentPlacement.RELATED, 401, Short.MAX_VALUE)
+							.addComponent(lblRglageDeLa, GroupLayout.PREFERRED_SIZE, 242, GroupLayout.PREFERRED_SIZE)
+							.addGap(198))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addComponent(lblPimpMyFridge)
+							.addPreferredGap(ComponentPlacement.RELATED, 586, Short.MAX_VALUE)
+							.addComponent(panel_logo, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
+							.addGap(27))))
 		);
 		groupLayout.setVerticalGroup(
-				groupLayout.createParallelGroup(Alignment.LEADING)
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+						.addComponent(lblPimpMyFridge)
+						.addComponent(panel_logo, GroupLayout.PREFERRED_SIZE, 57, GroupLayout.PREFERRED_SIZE))
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addGroup(groupLayout.createSequentialGroup()
-								.addContainerGap()
-								.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-										.addComponent(lblPimpMyFridge)
-										.addComponent(panel_logo, GroupLayout.PREFERRED_SIZE, 57, GroupLayout.PREFERRED_SIZE))
-								.addPreferredGap(ComponentPlacement.RELATED)
-								.addComponent(panel_chart, GroupLayout.PREFERRED_SIZE, 431, GroupLayout.PREFERRED_SIZE)
-								.addGap(13)
-								.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-										.addComponent(lblNewLabel)
-										.addComponent(lblRglageDeLa, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE))
-								.addPreferredGap(ComponentPlacement.UNRELATED)
-								.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-										.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-										.addComponent(panel, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
-								.addContainerGap())
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(panel_chart, GroupLayout.PREFERRED_SIZE, 431, GroupLayout.PREFERRED_SIZE)
+							.addGap(13)
+							.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+								.addComponent(lblNewLabel)
+								.addComponent(lblRglageDeLa, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(40)
+							.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
+								.addComponent(btnTempAtteinte, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+								.addComponent(lblNewLabel_1, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+							.addGap(23)
+							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+								.addComponent(lblAttentionCondensation)
+								.addComponent(buttonCondensation, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE))))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+						.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(panel, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))
+					.addContainerGap())
 		);
 
 		progressBar = new JProgressBar();
