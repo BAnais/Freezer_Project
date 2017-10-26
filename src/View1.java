@@ -97,6 +97,8 @@ public class View1 extends JFrame {
 		btnTempAtteinte = new JButton("");
 		btnTempAtteinte.setForeground(Color.RED);
 		btnTempAtteinte.setBackground(Color.RED);
+		btnTempAtteinte.setEnabled(false);
+		
 		
 		JLabel lblNewLabel_1 = new JLabel("Temp\u00E9rature atteinte");
 		lblNewLabel_1.setForeground(Color.WHITE);
@@ -104,6 +106,7 @@ public class View1 extends JFrame {
 		buttonCondensation = new JButton("");
 		buttonCondensation.setForeground(Color.ORANGE);
 		buttonCondensation.setBackground(Color.ORANGE);
+		buttonCondensation.setEnabled(false);
 		
 		JLabel lblAttentionCondensation = new JLabel("Attention condensation");
 		lblAttentionCondensation.setForeground(Color.WHITE);

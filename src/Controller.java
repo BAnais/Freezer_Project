@@ -13,7 +13,8 @@ public class Controller implements ActionListener, ModelObserver, ChangeListener
 	private static int vCons;
 	private static View1 view;
 	private Model data;
-
+	private Timer timer ;
+	private int step =0;
 	public Controller(Model data) {
 
 		view = new View1();
@@ -23,6 +24,8 @@ public class Controller implements ActionListener, ModelObserver, ChangeListener
 
 		view.setVisible(true);
 		view.slide.setVisible(true);
+		this.timer = new Timer(100,this);
+		this.timer.start();
 
 	        view.spinner.addChangeListener(new ChangeListener()
 	        {
@@ -54,7 +57,19 @@ public class Controller implements ActionListener, ModelObserver, ChangeListener
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		
+		if(data.getpRosee() >= data.getTempInt()){
+			
+			Color color = null;
+			switch(step){
+			case 0 : color = Color.ORANGE; break;
+			case 1 : color = Color.GRAY; break; 
+			default : step = 0;
+			}
+			step++;
+			this.view.buttonCondensation.setForeground(color);
+			
+		}
 	}
 
 	
@@ -75,19 +90,21 @@ public class Controller implements ActionListener, ModelObserver, ChangeListener
 			view.btnTempAtteinte.setBackground(Color.RED);
 
 		}
+
 	}
 
 	@Override
 	public void onHumidityChanged(double value) {
 		//gObjects.chart2.update(value);
 		view.progressBar.setValue((int) data.getHumid());
+
+		
 	}
 
 	@Override
 	public void onTemperatureConsigneChanged(double value) {
 		view.slide.setValue((Integer) view.spinner.getValue());
 		view.spinner.setValue(view.slide.getValue());
-		
 		view.chart.updateConsigne(value);
 	}
 
