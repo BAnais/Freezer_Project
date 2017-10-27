@@ -54,8 +54,9 @@ To integrate and hide all the electronic components in the fridge, we printed a 
 
 
 
-Software
+Software :
 
+![3D prints](https://github.com/BAnais/Freezer_Project/blob/master/22835615_1608939802502837_1758106464_n.png)
 
                                                       PICTURE INTERFACE JAVA
 
