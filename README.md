@@ -22,6 +22,9 @@ All this is connected to the Arduino UNO which makes the connection between the 
 
 Here's what it looks like inside the fridge:
 
+[![3D prints](https://github.com/BAnais/Freezer_Project/IMG_4134.JPG)
+
+
 
                                                         SCHEMA 
 
