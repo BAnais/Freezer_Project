@@ -1,8 +1,8 @@
 # Pimp My Fridge
 
 
-                                                BIG PICTURE OF THE FRIDGE
-
+![3D prints](https://github.com/BAnais/Freezer_Project/blob/master/IMG_4134.JPG)
+![3D prints](https://github.com/BAnais/Freezer_Project/blob/master/IMG_4136.JPG)
 
 
 The Pimp My Fridge Project, done by us, consists of making a USB Freezer which will allow the user to cool a can at the temperature he wants. It have also the ability to set the desired temperature in three different ways :
@@ -22,7 +22,7 @@ All this is connected to the Arduino UNO which makes the connection between the 
 
 Here's what it looks like inside the fridge:
 
-![3D prints](https://github.com/BAnais/Freezer_Project/blob/master/IMG_4134.JPG)
+
 
 
 
