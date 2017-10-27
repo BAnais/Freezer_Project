@@ -37,7 +37,7 @@ Power management / Electronic design
 
 
 
-                                                        FRITZING
+![3D prints](https://github.com/BAnais/Freezer_Project/blob/master/22879183_2093475764001256_872106390_o.png)
 
 
 
