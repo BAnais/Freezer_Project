@@ -29,10 +29,6 @@ Here's what it looks like inside the fridge:
 ![3D prints](https://github.com/BAnais/Freezer_Project/blob/master/Capture.PNG)
 
 
-                                                        SCHEMA 
-
-
-
 Conception
 
 Power management / Electronic design
