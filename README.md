@@ -58,7 +58,7 @@ Software :
 
 ![3D prints](https://github.com/BAnais/Freezer_Project/blob/master/22835615_1608939802502837_1758106464_n.png)
 
-                                                      PICTURE INTERFACE JAVA
+![3D prints](https://github.com/BAnais/Freezer_Project/blob/master/22882427_527892557556267_1085766686_o.png)
 
 
 
