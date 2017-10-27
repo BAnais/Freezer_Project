@@ -18,6 +18,7 @@ Here's how it works:
 
 ![3D prints](https://github.com/BAnais/Freezer_Project/blob/master/IMG_4136.JPG)
 ![3D prints](https://github.com/BAnais/Freezer_Project/blob/master/IMG_4137.JPG)
+![3D prints](https://github.com/BAnais/Freezer_Project/blob/master/22851197_527796014232588_625399516_o.jpg)
 
 We have created the casing with a 3D printer to serve as a fridge and also to contain all the electronic components.The Arduino Uno which bridges the gap between the electronic circuit (data flows in both directions) and the interface Java. We have an electronic assembly that makes it possible to operate the Peltier effect plate and its fan as well as the transistors and mosfets. This assembly allows us thanks to the DHT and the thermistor to recover the internal and external temperatures of the fridge to allow the system to have a maximum of efficiency.
 All this is connected to the Arduino UNO which makes the connection between the electronic circuit and Java IHM.
